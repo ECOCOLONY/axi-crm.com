@@ -13,10 +13,10 @@ namespace KaracadanWebApp
         {
         }
 
-        public DbSet<Personels> Personels { get; set; }
+        public DbSet<Employee> Personels { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<Personels>(entity =>
+            builder.Entity<Employee>(entity =>
             {
                 entity.Property(e => e.Name)
                     .IsRequired()

@@ -24,14 +24,14 @@ namespace KaracadanWebApp.Controllers
 
         public IActionResult Create()
         {
-            var person = new Personels();
+            var person = new Employee();
             ViewBag.BreadCrumbFirstItem = "Personel";
             ViewBag.BreadCrumbSecondItem = "Yeni Personel Oluştur";
             return View(person);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Personels personel)
+        public async Task<IActionResult> Create(Employee personel)
         {
             await _context.Personels.AddAsync(personel);
             await _context.SaveChangesAsync();
