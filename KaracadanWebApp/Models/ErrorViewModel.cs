@@ -1,4 +1,4 @@
-namespace KaracadanWebApp.Models
+namespace Base.WebUI.Models
 {
     public class ErrorViewModel
     {

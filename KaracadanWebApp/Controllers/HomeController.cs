@@ -1,9 +1,9 @@
-﻿using KaracadanWebApp.Models;
+﻿using Base.WebUI.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Authorization;
 
-namespace KaracadanWebApp.Controllers
+namespace Base.WebUI.Controllers
 {
     [Authorize]
     public class HomeController : Controller

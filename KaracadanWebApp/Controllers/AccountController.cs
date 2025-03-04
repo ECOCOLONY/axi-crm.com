@@ -1,8 +1,8 @@
-﻿using KaracadanWebApp.Models;
+﻿using Base.WebUI.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-namespace KaracadanWebApp.Controllers
+namespace Base.WebUI.Controllers
 {
     public class AccountController : BaseController
     {

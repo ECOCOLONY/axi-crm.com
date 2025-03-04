@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace KaracadanWebApp.Models
+namespace Base.WebUI.Models
 {
     public class ApplicationUser: IdentityUser
     {

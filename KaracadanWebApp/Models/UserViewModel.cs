@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace KaracadanWebApp.Models
+namespace Base.WebUI.Models
 {
     public class UserRegisterModel
     {

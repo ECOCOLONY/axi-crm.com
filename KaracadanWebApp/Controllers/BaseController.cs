@@ -1,8 +1,9 @@
-﻿using KaracadanWebApp.Models;
+﻿using Base.Infrastructure.Persistence;
+using Base.WebUI.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-namespace KaracadanWebApp.Controllers
+namespace Base.WebUI.Controllers
 {
     public class BaseController : Controller
     {

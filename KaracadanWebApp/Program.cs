@@ -1,5 +1,6 @@
-using KaracadanWebApp;
-using KaracadanWebApp.Models;
+using Base.Application;
+using Base.Infrastructure;
+using Base.WebUI.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Serialization;
@@ -9,15 +10,9 @@ var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager configuration = builder.Configuration; // allows both to access and to set up the config
 IWebHostEnvironment environment = builder.Environment;
 
-
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-});
-
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-    .AddEntityFrameworkStores<ApplicationDbContext>()
-    .AddDefaultTokenProviders();
+// Add services to the container.
+builder.Services.AddApplication();
+builder.Services.AddInfrastructure(configuration);
 
 builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews();
@@ -64,10 +59,6 @@ builder.Services.ConfigureApplicationCookie(options =>
 
 //lower url
 builder.Services.AddRouting(options => options.LowercaseUrls = true);
-
-builder.Services.AddMvc();
-// Add services to the container.
-builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
